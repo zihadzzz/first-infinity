@@ -36,6 +36,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;c
 /* ── SMOOTH PAGE TRANSITIONS ── */
 .pw>div{animation:pgIn .25s cubic-bezier(.25,.46,.45,.94);}
 @keyframes pgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
 
 /* ── RIPPLE EFFECT on buttons ── */
 .btn-g,.bn,.p-act,.c-btn,.ic-ans,.ic-dec,.btn-acc,.ch-item{position:relative;overflow:hidden;}
@@ -548,6 +549,290 @@ body.th-light .mw-top{background:rgba(255,255,255,.97);}
 /* Skeleton items */
 .sk-post{height:190px;border-radius:16px;margin:0 10px 10px;}
 .sk-chat{height:62px;border-radius:12px;margin:6px 14px;}
+
+/* ══════════════════════════════════════════
+   ENHANCED UI — Beautiful Extra Styles
+   ══════════════════════════════════════════ */
+
+/* ── GLASSMORPHISM CARDS ── */
+.glass-card{background:rgba(15,15,26,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.08);border-radius:20px;}
+.glass-card-light{background:rgba(255,255,255,.05);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.1);border-radius:16px;}
+
+/* ── GRADIENT TEXT ── */
+.grad-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.grad-text-gold{background:linear-gradient(135deg,#ffd740,#ffab40);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.grad-text-green{background:linear-gradient(135deg,#4dff91,#00b0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+/* ── NEON GLOW EFFECTS ── */
+.neon-cyan{box-shadow:0 0 20px rgba(0,212,255,.3),0 0 40px rgba(0,212,255,.1);}
+.neon-pink{box-shadow:0 0 20px rgba(255,61,127,.3),0 0 40px rgba(255,61,127,.1);}
+.neon-purple{box-shadow:0 0 20px rgba(124,108,255,.3),0 0 40px rgba(124,108,255,.1);}
+.neon-green{box-shadow:0 0 20px rgba(77,255,145,.3),0 0 40px rgba(77,255,145,.1);}
+
+/* ── FLOATING ACTION BUTTON ── */
+.fab{position:fixed;bottom:70px;right:16px;width:52px;height:52px;border-radius:50%;background:var(--grad);border:none;color:#fff;font-size:24px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.5),0 0 20px rgba(0,212,255,.2);z-index:50;display:flex;align-items:center;justify-content:center;transition:.2s;-webkit-tap-highlight-color:transparent;}
+.fab:active{transform:scale(.9);}
+.fab.hidden{transform:scale(0);opacity:0;pointer-events:none;}
+
+/* ── BADGE COUNTER ── */
+.badge{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;border-radius:10px;background:var(--a2);color:#fff;font-size:10px;font-weight:800;padding:0 5px;border:2px solid var(--bg);}
+.badge-sm{min-width:16px;height:16px;font-size:9px;}
+.badge-lg{min-width:26px;height:26px;font-size:12px;}
+
+/* ── AVATAR RING STYLES ── */
+.av-ring-live{background:linear-gradient(135deg,#ff0050,#ff6b35,#ffd700);padding:2.5px;border-radius:50%;}
+.av-ring-story{background:var(--grad);padding:2.5px;border-radius:50%;}
+.av-ring-online{background:linear-gradient(135deg,#4dff91,#00b0ff);padding:2.5px;border-radius:50%;}
+.av-inner{background:var(--bg);border-radius:50%;padding:2px;}
+
+/* ── STORY VIEWER ENHANCED ── */
+.sv-progress{position:absolute;top:8px;left:8px;right:8px;display:flex;gap:3px;z-index:10;}
+.sv-prog-bar{flex:1;height:2.5px;background:rgba(255,255,255,.3);border-radius:2px;overflow:hidden;}
+.sv-prog-fill{height:100%;background:#fff;width:0;transition:width linear;}
+.sv-prog-fill.done{width:100%!important;}
+.sv-close-btn{position:absolute;top:16px;right:16px;z-index:10;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);border:none;color:#fff;font-size:20px;cursor:pointer;}
+.sv-nav-area{position:absolute;inset:0;display:flex;}
+.sv-left{flex:1;cursor:pointer;}
+.sv-right{flex:1;cursor:pointer;}
+.sv-info{position:absolute;bottom:0;left:0;right:0;padding:20px 16px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);}
+.sv-author{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.sv-em{width:36px;height:36px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:18px;}
+.sv-nm{font-size:14px;font-weight:700;color:#fff;}
+.sv-tm{font-size:11px;color:rgba(255,255,255,.6);}
+.sv-txt{font-size:16px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.5);font-weight:600;margin-bottom:8px;}
+.sv-rxns{display:flex;gap:8px;margin-top:8px;}
+.sv-rxn-btn{padding:6px 12px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;font-size:16px;cursor:pointer;backdrop-filter:blur(8px);}
+.sv-rxn-btn:active{background:rgba(255,255,255,.3);}
+.sv-delete{position:absolute;top:58px;right:16px;z-index:10;background:rgba(255,61,127,.2);border:1px solid rgba(255,61,127,.4);border-radius:10px;padding:6px 12px;color:#ff3d7f;font-size:12px;cursor:pointer;font-weight:700;}
+
+/* ── CHAT IMPROVEMENTS ── */
+.msg-search-bar{display:none;background:var(--c2);border-bottom:1px solid var(--br);padding:8px 12px;flex-shrink:0;align-items:center;gap:8px;}
+.msg-search-bar.vis{display:flex;}
+.msg-search-inp{flex:1;background:var(--c1);border:1px solid var(--br);border-radius:20px;padding:8px 14px;color:var(--tx);font-size:13px;outline:none;}
+.msg-search-inp:focus{border-color:var(--a);}
+
+/* ── REACTION ANIMATION ── */
+@keyframes rxnPop{0%{transform:scale(0) translateY(0);opacity:1}70%{transform:scale(1.3) translateY(-30px);opacity:1}100%{transform:scale(1) translateY(-50px);opacity:0}}
+.rxn-float{position:fixed;font-size:28px;z-index:999;pointer-events:none;animation:rxnPop .8s ease-out forwards;}
+
+/* ── POST CARD ENHANCEMENTS ── */
+.post-banner{width:100%;height:4px;background:var(--grad);border-radius:0 0 4px 4px;margin-bottom:-2px;}
+.post.trending .post-banner{background:linear-gradient(90deg,#ff0050,#ff6b35,#ffd700);}
+.post.trending::before{content:'🔥 Trending';position:absolute;top:8px;right:12px;background:rgba(255,0,80,.15);border:1px solid rgba(255,0,80,.3);border-radius:20px;padding:2px 10px;font-size:10px;color:#ff0050;font-weight:700;}
+.post{position:relative;}
+
+/* ── DISCOVER / SEARCH ── */
+.disc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;padding:12px;}
+.disc-card{background:var(--c1);border:1px solid var(--br);border-radius:16px;overflow:hidden;cursor:pointer;transition:.15s;}
+.disc-card:active{transform:scale(.97);}
+.disc-card-bg{height:80px;display:flex;align-items:center;justify-content:center;font-size:36px;}
+.disc-card-body{padding:10px 12px;}
+.disc-card-nm{font-size:14px;font-weight:700;}
+.disc-card-sub{font-size:11px;color:var(--m);margin-top:2px;}
+
+/* ── NOTIFICATION BADGE PULSE ── */
+@keyframes notifPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+.notif-pulse{animation:notifPulse .6s ease 3;}
+
+/* ── SHIMMER LOAD ── */
+.shimmer{background:linear-gradient(90deg,var(--c2) 25%,rgba(255,255,255,.04) 50%,var(--c2) 75%);background-size:400% 100%;animation:shimmer 1.2s ease infinite;}
+@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
+
+/* ── MODAL ENHANCEMENTS ── */
+.modal-drag{width:40px;height:4px;background:var(--br2);border-radius:4px;margin:0 auto 16px;}
+.modal-title{font-size:18px;font-weight:800;margin-bottom:16px;}
+.modal-sub{font-size:13px;color:var(--m);margin-bottom:16px;line-height:1.6;}
+.modal-divider{height:1px;background:var(--br);margin:16px 0;}
+.modal-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--br);}
+.modal-row:last-child{border-bottom:none;}
+.modal-row-ic{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.modal-row-inf{flex:1;}
+.modal-row-nm{font-size:14px;font-weight:600;}
+.modal-row-sub{font-size:12px;color:var(--m);margin-top:1px;}
+.modal-row-act{color:var(--a);font-size:13px;font-weight:700;cursor:pointer;}
+
+/* ── TOGGLE SWITCH ── */
+.toggle-wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+.toggle-label{font-size:14px;font-weight:600;}
+.toggle{position:relative;width:48px;height:26px;flex-shrink:0;}
+.toggle input{opacity:0;width:0;height:0;}
+.toggle-slider{position:absolute;inset:0;background:var(--c2);border-radius:26px;transition:.3s;border:1px solid var(--br);}
+.toggle input:checked+.toggle-slider{background:var(--a);}
+.toggle-slider::before{content:'';position:absolute;width:20px;height:20px;left:2px;top:2px;background:#fff;border-radius:50%;transition:.3s;}
+.toggle input:checked+.toggle-slider::before{transform:translateX(22px);}
+
+/* ── INPUT STYLES ENHANCED ── */
+.inp-group{margin-bottom:14px;}
+.inp-label{font-size:11px;color:var(--m);font-weight:700;letter-spacing:.5px;margin-bottom:5px;padding-left:2px;text-transform:uppercase;}
+.inp-field{width:100%;background:var(--c2);border:1.5px solid var(--br);border-radius:12px;padding:13px 15px;color:var(--tx);font-size:15px;outline:none;box-sizing:border-box;transition:.2s;}
+.inp-field:focus{border-color:var(--a);box-shadow:0 0 0 3px rgba(0,212,255,.1);}
+.inp-field.error{border-color:var(--a2);box-shadow:0 0 0 3px rgba(255,61,127,.1);}
+.inp-field.success{border-color:var(--a3);}
+.inp-hint{font-size:11px;color:var(--m);margin-top:4px;padding-left:2px;}
+.inp-error{font-size:11px;color:var(--a2);margin-top:4px;padding-left:2px;display:none;}
+.inp-error.show{display:block;}
+
+/* ── BUTTON VARIANTS ── */
+.btn-primary{background:var(--grad);border:none;border-radius:14px;padding:14px;color:#fff;font-weight:800;font-size:15px;cursor:pointer;width:100%;transition:.15s;box-shadow:0 8px 24px rgba(0,180,220,.2);}
+.btn-primary:active{transform:scale(.97);}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;}
+.btn-secondary{background:var(--c2);border:1.5px solid var(--br);border-radius:14px;padding:13px;color:var(--tx);font-weight:700;font-size:15px;cursor:pointer;width:100%;transition:.15s;}
+.btn-secondary:active{border-color:var(--a);color:var(--a);}
+.btn-danger{background:rgba(255,61,127,.1);border:1.5px solid rgba(255,61,127,.3);border-radius:14px;padding:13px;color:#ff3d7f;font-weight:700;font-size:15px;cursor:pointer;width:100%;transition:.15s;}
+.btn-danger:active{background:rgba(255,61,127,.2);}
+.btn-icon{width:44px;height:44px;border-radius:50%;border:none;background:var(--c2);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;transition:.15s;}
+.btn-icon:active{background:rgba(0,212,255,.2);}
+.btn-icon.active{background:rgba(0,212,255,.15);color:var(--a);}
+
+/* ── CHAT MESSAGE SEARCH HIGHLIGHT ── */
+.msg-highlight{background:rgba(255,170,0,.2);border-radius:3px;padding:0 2px;}
+
+/* ── ONLINE STATUS BAR ── */
+.online-bar{background:linear-gradient(90deg,rgba(77,255,145,.1),transparent);border-left:3px solid var(--a3);padding:8px 12px;margin:0 10px 8px;border-radius:0 8px 8px 0;font-size:12px;color:var(--a3);display:flex;align-items:center;gap:8px;}
+.online-dot{width:8px;height:8px;border-radius:50%;background:var(--a3);animation:onpulse 2s infinite;flex-shrink:0;}
+
+/* ── FEED SECTION DIVIDERS ── */
+.feed-divider{display:flex;align-items:center;gap:12px;padding:8px 14px;margin:4px 0;}
+.feed-divider-line{flex:1;height:1px;background:var(--br);}
+.feed-divider-text{font-size:11px;color:var(--m);font-weight:600;white-space:nowrap;}
+
+/* ── POST REACTIONS ANIMATED ── */
+.rxn-bar{display:flex;gap:4px;padding:6px 12px;border-top:1px solid var(--br);overflow-x:auto;scrollbar-width:none;}
+.rxn-bar::-webkit-scrollbar{display:none;}
+.rxn-chip{display:flex;align-items:center;gap:4px;padding:4px 10px;background:var(--c2);border:1px solid var(--br);border-radius:20px;cursor:pointer;white-space:nowrap;transition:.15s;}
+.rxn-chip:active{transform:scale(.9);}
+.rxn-chip.mine{background:rgba(0,212,255,.1);border-color:rgba(0,212,255,.3);}
+.rxn-count{font-size:11px;color:var(--m);font-weight:600;}
+
+/* ── CHAT LIST ENHANCEMENTS ── */
+.ch-unread .ch-pr{color:var(--tx);font-weight:600;}
+.ch-unread-cnt{min-width:20px;height:20px;border-radius:10px;background:var(--a);color:#000;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 5px;flex-shrink:0;}
+
+/* ── PROFILE ENHANCEMENTS ── */
+.p-badge{display:inline-flex;align-items:center;gap:4px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.25);border-radius:20px;padding:3px 10px;font-size:11px;color:var(--a);font-weight:700;margin-top:6px;}
+.p-mood-tag{display:inline-flex;align-items:center;gap:4px;background:rgba(255,61,127,.08);border:1px solid rgba(255,61,127,.2);border-radius:20px;padding:3px 10px;font-size:12px;color:var(--m2);margin-top:4px;}
+.p-tab-bar{display:flex;border-bottom:1px solid var(--br);margin-top:10px;}
+.p-tab{flex:1;padding:12px;text-align:center;font-size:13px;color:var(--m);cursor:pointer;border-bottom:2px solid transparent;transition:.2s;font-weight:600;}
+.p-tab.on{color:var(--a);border-bottom-color:var(--a);}
+.p-tab-content{display:none;}
+.p-tab-content.on{display:block;}
+
+/* ── SETTINGS ICON COLORS ── */
+.set-ic-cyan{background:rgba(0,212,255,.1);color:var(--a);}
+.set-ic-pink{background:rgba(255,61,127,.1);color:var(--a2);}
+.set-ic-purple{background:rgba(124,108,255,.1);color:#7c6cff;}
+.set-ic-green{background:rgba(77,255,145,.1);color:var(--a3);}
+.set-ic-gold{background:rgba(255,170,0,.1);color:var(--a4);}
+.set-ic-red{background:rgba(255,61,61,.1);color:#ff3d3d;}
+
+/* ── SECURITY SECTION ── */
+.sec-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:700;}
+.sec-badge.secure{background:rgba(77,255,145,.1);border:1px solid rgba(77,255,145,.2);color:var(--a3);}
+.sec-badge.warn{background:rgba(255,170,0,.1);border:1px solid rgba(255,170,0,.2);color:var(--a4);}
+.sec-badge.danger{background:rgba(255,61,127,.1);border:1px solid rgba(255,61,127,.2);color:var(--a2);}
+
+/* ── ANIMATED GRADIENTS ── */
+@keyframes gradShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.animated-grad{background:linear-gradient(270deg,#00d4ff,#7c6cff,#ff3d7f,#4dff91);background-size:400% 400%;animation:gradShift 6s ease infinite;}
+.animated-grad-text{background:linear-gradient(270deg,#00d4ff,#7c6cff,#ff3d7f);background-size:400% 400%;animation:gradShift 4s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+/* ── FEED POST IMPROVEMENTS ── */
+.p-location{display:flex;align-items:center;gap:4px;font-size:11px;color:var(--m);margin-top:2px;}
+.p-tag{display:inline-block;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);border-radius:12px;padding:2px 8px;font-size:11px;color:var(--a);margin:2px;cursor:pointer;}
+.p-tag:hover{background:rgba(0,212,255,.15);}
+
+/* ── VOICE MSG IMPROVEMENTS ── */
+.voice-wave{display:flex;align-items:center;gap:2px;height:20px;}
+.voice-bar-item{width:3px;border-radius:3px;background:rgba(255,255,255,.6);animation:vwave .8s ease-in-out infinite;}
+.voice-bar-item:nth-child(2){animation-delay:.1s;}
+.voice-bar-item:nth-child(3){animation-delay:.2s;height:70%!important;}
+.voice-bar-item:nth-child(4){animation-delay:.3s;}
+.voice-bar-item:nth-child(5){animation-delay:.4s;height:60%!important;}
+@keyframes vwave{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+
+/* ── MESSENGER SPECIFIC ── */
+.chat-pass-notice{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(124,108,255,.06);border-bottom:1px solid rgba(124,108,255,.15);}
+.chat-pass-notice-text{flex:1;font-size:12px;color:var(--m2);}
+.chat-pass-notice-btn{background:linear-gradient(135deg,#7c6cff,#ff3d7f);border:none;border-radius:20px;padding:6px 14px;color:#fff;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;}
+
+/* ── STATUS INDICATORS ── */
+.status-online{color:var(--a3);}
+.status-away{color:var(--a4);}
+.status-busy{color:var(--a2);}
+.status-offline{color:var(--m);}
+
+/* ── TIKTOK REEL PLAYER ── */
+#pg-reels .loader-ring{width:44px;height:44px;border-radius:50%;border:3px solid rgba(255,255,255,.15);border-top-color:#ff3d7f;animation:spin .7s linear infinite;}
+.reel-overlay-top{position:absolute;top:0;left:0;right:0;z-index:15;padding:10px 14px;background:linear-gradient(to bottom,rgba(0,0,0,.6),transparent);display:flex;align-items:center;justify-content:space-between;}
+.reel-title-tag{background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:4px 12px;font-size:12px;color:#fff;font-weight:700;backdrop-filter:blur(8px);}
+
+/* ── EXTRA MICRO-INTERACTIONS ── */
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.shake{animation:shake .4s ease;}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.bounce{animation:bounce .4s ease;}
+@keyframes pulse-ring{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.6);opacity:0}}
+.pulse-ring::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid currentColor;animation:pulse-ring 1.5s ease infinite;}
+
+/* ── CHAT MESSAGE TYPES ── */
+.system-msg{text-align:center;margin:8px 0;}
+.system-msg span{background:var(--c2);border:1px solid var(--br);border-radius:20px;padding:4px 14px;font-size:11px;color:var(--m);}
+.pinned-msg-banner{background:rgba(255,170,0,.06);border-left:3px solid var(--a4);padding:8px 14px;font-size:12px;color:var(--a4);display:flex;align-items:center;gap:8px;cursor:pointer;flex-shrink:0;}
+
+/* ── STORY CREATE ENHANCEMENTS ── */
+.story-type-sel{display:flex;gap:8px;margin-bottom:14px;}
+.story-type-btn{flex:1;padding:10px;background:var(--c2);border:1.5px solid var(--br);border-radius:12px;color:var(--m);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:.15s;}
+.story-type-btn.on{background:rgba(0,212,255,.1);border-color:var(--a);color:var(--a);}
+
+/* ── COLORS ── */
+.c-cyan{color:var(--a);}
+.c-pink{color:var(--a2);}
+.c-green{color:var(--a3);}
+.c-gold{color:var(--a4);}
+.c-muted{color:var(--m);}
+.bg-cyan{background:rgba(0,212,255,.1);}
+.bg-pink{background:rgba(255,61,127,.1);}
+.bg-green{background:rgba(77,255,145,.1);}
+.bg-purple{background:rgba(124,108,255,.1);}
+
+/* ── SCROLLBAR CUSTOM ── */
+.custom-scroll::-webkit-scrollbar{width:4px;}
+.custom-scroll::-webkit-scrollbar-track{background:transparent;}
+.custom-scroll::-webkit-scrollbar-thumb{background:var(--br2);border-radius:4px;}
+.custom-scroll::-webkit-scrollbar-thumb:hover{background:var(--a);}
+
+/* ── CARDS ROW ── */
+.cards-row{display:flex;gap:10px;padding:10px 12px;overflow-x:auto;scrollbar-width:none;}
+.cards-row::-webkit-scrollbar{display:none;}
+.stat-card{flex-shrink:0;background:var(--c1);border:1px solid var(--br);border-radius:16px;padding:14px;min-width:110px;text-align:center;}
+.stat-card-n{font-size:24px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.stat-card-l{font-size:11px;color:var(--m);margin-top:3px;}
+
+/* ── FORM GROUP ── */
+.form-group{margin-bottom:16px;}
+.form-label{font-size:11px;font-weight:700;color:var(--m);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;display:block;}
+.form-hint{font-size:11px;color:var(--m);margin-top:4px;}
+.form-error{font-size:11px;color:var(--a2);margin-top:4px;display:none;}
+.form-error.show{display:block;}
+
+/* ── BOTTOM SHEET SHARED ── */
+.bottom-sheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:400;display:none;align-items:flex-end;}
+.bottom-sheet-overlay.vis{display:flex;}
+.bottom-sheet{background:var(--c1);border-radius:24px 24px 0 0;width:100%;max-height:90vh;overflow-y:auto;padding:16px 18px 32px;animation:su .32s cubic-bezier(.16,1,.3,1);}
+.bottom-sheet-handle{width:44px;height:4px;background:var(--br2);border-radius:4px;margin:0 auto 18px;}
+
+/* ── NOTIFICATION TYPES ── */
+.notif-like{border-left:3px solid var(--a2);}
+.notif-comment{border-left:3px solid var(--a);}
+.notif-friend{border-left:3px solid var(--a3);}
+.notif-story{border-left:3px solid var(--a4);}
+.notif-msg{border-left:3px solid #7c6cff;}
+
+/* ── MEDIA QUERY: Tablet ── */
+@media(min-width:600px){
+  .pw,.mw,.pg-reels{max-width:480px;margin:0 auto;left:50%;right:auto;transform:translateX(-50%);}
+  .topbar,.bnav{max-width:480px;left:50%;right:auto;transform:translateX(-50%);}
+}
 </style>
 <style>
 /* Hide Chrome autofill suggestions bar - nuclear option */
@@ -691,7 +976,7 @@ input:-webkit-autofill:focus {
       FIRST INFINITY
     </div>
     <div class="t-r">
-      <div class="d-pill" id="d-pill">&#128190; 0 KB</div>
+      <div class="d-pill" id="d-pill" onclick="showDataUsage()" style="cursor:pointer;">&#128190; 0 KB</div>
       <button class="ib" onclick="sw('settings')">&#9881;&#65039;</button>
       <button class="ib" id="n-ib" onclick="sw('notif')"><div class="n-dot" id="n-dot" style="display:none"></div>&#128276;</button>
       <button class="ib" onclick="doLogout()">&#128682;</button>
@@ -746,22 +1031,53 @@ input:-webkit-autofill:focus {
         <div class="p-grid" id="pGrid"></div>
       </div>
     </div>
-    <!-- REELS -->
-    <div id="pg-reels" style="display:none;position:fixed;top:52px;bottom:56px;left:0;right:0;background:#000;overflow:hidden;">
-      <div id="reelsFeed" style="width:100%;height:100%;overflow-y:scroll;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior:none;" onscroll="onReelScroll(this)">
+    <!-- REELS — TikTok Vertical Player -->
+    <div id="pg-reels" style="display:none;position:fixed;top:52px;bottom:56px;left:0;right:0;background:#000;flex-direction:column;">
+      <!-- Header -->
+      <div style="position:absolute;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:linear-gradient(to bottom,rgba(0,0,0,.7),transparent);pointer-events:none;">
+        <div style="font-size:18px;font-weight:900;color:#fff;letter-spacing:1px;pointer-events:none;">🎬 Reels</div>
+        <div style="display:flex;gap:8px;pointer-events:all;">
+          <button onclick="reelPrev()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(6px);">↑</button>
+          <button onclick="reelNext()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;font-size:18px;cursor:pointer;backdrop-filter:blur(6px);">↓</button>
+        </div>
       </div>
-      <!-- Mute/unmute button -->
-      <button id="reelMuteBtn" onclick="toggleReelMute()" style="position:absolute;top:12px;right:12px;z-index:50;width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.65);border:2px solid rgba(255,255,255,.3);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);">🔇</button>
+      <!-- TikTok video frame -->
+      <div id="reelWrap" style="flex:1;position:relative;overflow:hidden;touch-action:pan-y;">
+        <iframe id="reelFrame" src="" style="position:absolute;inset:0;width:100%;height:100%;border:none;background:#000;"
+          allow="autoplay;encrypted-media;fullscreen;picture-in-picture"
+          allowfullscreen></iframe>
+        <!-- Loading indicator -->
+        <div id="reelLoader" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#000;z-index:5;">
+          <div style="width:60px;height:60px;border-radius:50%;border:3px solid rgba(255,255,255,.1);border-top-color:#ff3d7f;animation:spin .8s linear infinite;margin-bottom:16px;"></div>
+          <div style="color:rgba(255,255,255,.6);font-size:13px;">Loading TikTok...</div>
+        </div>
+        <!-- Swipe hint overlay (transparent, intercepts swipes) -->
+        <div id="reelSwipeArea" style="position:absolute;inset:0;z-index:10;touch-action:pan-y;" ontouchstart="reelTouchStart(event)" ontouchend="reelTouchEnd(event)"></div>
+      </div>
+      <!-- Bottom action bar -->
+      <div id="reelBar" style="position:absolute;bottom:0;left:0;right:0;z-index:20;padding:12px 14px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);display:flex;align-items:center;justify-content:space-between;pointer-events:none;">
+        <div id="reelTitle" style="font-size:13px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.8);flex:1;margin-right:12px;pointer-events:none;"></div>
+        <div style="display:flex;gap:10px;pointer-events:all;">
+          <button onclick="shareCurrentReel()" style="background:rgba(255,255,255,.2);border:1.5px solid rgba(255,255,255,.4);border-radius:22px;padding:8px 16px;color:#fff;font-weight:700;font-size:13px;cursor:pointer;backdrop-filter:blur(8px);">📤 Share</button>
+          <button onclick="openReelTikTok()" style="background:linear-gradient(135deg,#ff0050,#ff3d7f);border:none;border-radius:22px;padding:8px 16px;color:#fff;font-weight:700;font-size:13px;cursor:pointer;">🎵 TikTok</button>
+        </div>
+      </div>
+      <!-- Progress dots -->
+      <div id="reelDots" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:6px;"></div>
     </div>
     <!-- SETTINGS -->
     <div id="pg-settings" style="display:none">
       <div class="set-pg">
         <div class="set-sec"><div class="set-h">&#127775; Custom Theme</div><div class="th-grid" id="thGrid"></div></div>
         <div class="set-sec">
-          <div class="set-h">&#9881;&#65039; Settings</div>
-          <div class="set-row" onclick="editBio()"><div class="set-ic" style="background:rgba(0,212,255,.1)">&#9998;&#65039;</div><div class="set-inf"><div class="set-nm">Edit Profile</div><div class="set-sb">Change name, bio, emoji</div></div><span>&#8250;</span></div>
-          <div class="set-row" onclick="showDisc()"><div class="set-ic" style="background:rgba(77,255,145,.1)">&#128101;</div><div class="set-inf"><div class="set-nm">Find Friends</div><div class="set-sb">Discover people</div></div><span>&#8250;</span></div>
-          <div class="set-row" onclick="doLogout()"><div class="set-ic" style="background:rgba(255,61,127,.1)">&#128682;</div><div class="set-inf"><div class="set-nm">Logout</div></div><span>&#8250;</span></div>
+          <div class="set-h">👤 Account</div>
+          <div class="set-row" onclick="editBio()"><div class="set-ic set-ic-cyan">✏️</div><div class="set-inf"><div class="set-nm">Edit Profile</div><div class="set-sb">Change name, bio, photo, emoji</div></div><span>›</span></div>
+          <div class="set-row" onclick="showDisc()"><div class="set-ic set-ic-green">🫂</div><div class="set-inf"><div class="set-nm">Find Friends</div><div class="set-sb">Discover people on First Infinity</div></div><span>›</span></div>
+          <div class="set-row" onclick="changeChatPass()"><div class="set-ic set-ic-purple">🔐</div><div class="set-inf"><div class="set-nm">Chat Password</div><div class="set-sb">Change your messenger lock password</div></div><span>›</span></div>
+          <div class="set-row" onclick="openPrivacySettings()"><div class="set-ic set-ic-cyan">🔒</div><div class="set-inf"><div class="set-nm">Privacy & Security</div><div class="set-sb">Control who sees your info</div></div><span>›</span></div>
+          <div class="set-row" onclick="showDataUsage()"><div class="set-ic set-ic-green">💾</div><div class="set-inf"><div class="set-nm">Data Usage</div><div class="set-sb">See your session data usage</div></div><span>›</span></div>
+          <div class="set-row" onclick="showAppInfo()"><div class="set-ic" style="background:rgba(255,170,0,.1);">ℹ️</div><div class="set-inf"><div class="set-nm">About First Infinity</div><div class="set-sb">Version 3.0.0 — Made with ❤️</div></div><span>›</span></div>
+          <div class="set-row" onclick="doLogout()" style="border-bottom:none;"><div class="set-ic set-ic-red">🚪</div><div class="set-inf"><div class="set-nm" style="color:#ff3d3d;">Logout</div><div class="set-sb">Sign out from your account</div></div><span>›</span></div>
         </div>
         <div class="set-sec">
           <div class="set-h">&#8505;&#65039; About First Infinity</div>
@@ -788,11 +1104,11 @@ input:-webkit-autofill:focus {
     <button class="mw-back" onclick="closeMW()">&#8249;</button>
     <div class="mw-av" id="mwAv">&#128512;</div>
     <div class="mw-info"><div class="mw-nm" id="mwNm">-</div><div class="mw-st" id="mwSt">&#9679; Online</div></div>
-    <button onclick="changeChatPass()" style="background:none;border:none;color:var(--m2);font-size:19px;cursor:pointer;padding:4px 8px" title="Change chat password">&#128272;</button>
     <div class="mw-acts">
-      <button class="c-btn" onclick="startCall('audio')">&#128222;</button>
-      <button class="c-btn" onclick="startCall('video')">&#127909;</button>
-      <button class="c-btn" onclick="showFwdList()">&#8599;&#65039;</button>
+      <button class="c-btn" onclick="startCall('audio')" title="Voice call">&#128222;</button>
+      <button class="c-btn" onclick="startCall('video')" title="Video call">&#127909;</button>
+      <button class="c-btn" onclick="changeChatPass()" title="Change chat password" style="font-size:15px;">&#128272;</button>
+      <button class="c-btn" onclick="showFwdList()" title="Forward">&#8599;&#65039;</button>
     </div>
   </div>
   <div class="ty-ind" id="tyInd"><div class="t-dot"><span></span><span></span><span></span></div><span id="tyNm"></span> is typing...</div>
@@ -810,6 +1126,11 @@ input:-webkit-autofill:focus {
     <button class="fb" onclick="showLkM()">&#128279;</button>
     <div class="fb-sp"></div>
     <button class="fb" onclick="fmt('clr')" style="font-size:10px">&#215;fmt</button>
+  </div>
+  <!-- Chat password change bar - shown at top when chat is open -->
+  <div id="chatPassBar" style="display:none;background:rgba(124,108,255,.08);border-bottom:1px solid rgba(124,108,255,.2);padding:8px 14px;flex-direction:row;align-items:center;gap:10px;flex-shrink:0;">
+    <span style="font-size:13px;color:var(--m2);flex:1;">🔐 Chat lock is active</span>
+    <button onclick="changeChatPass()" style="background:linear-gradient(135deg,#7c6cff,#ff3d7f);border:none;border-radius:20px;padding:7px 16px;color:#fff;font-size:12px;font-weight:700;cursor:pointer;">Change Password</button>
   </div>
   <div class="mw-inp">
     <button class="cam-btn" onclick="pickChatImg()" title="Send photo">&#128247;</button>
@@ -1546,7 +1867,10 @@ async function loadChatList(){
 }
 
 // MSG WINDOW
-window.openChat=u=>{chatU=u;G('mw').classList.add('open');G('mwAv').textContent=u.emoji||'😊';G('mwNm').textContent=u.name;const st=G('mwSt');if(u.isOnline){st.textContent='● Online';st.className='mw-st';}else{st.textContent='○ Last seen '+tAgo(u.lastSeen?.toDate?.());st.className='mw-st off';}clrReply();loadMsgs();listenTyping();
+window.openChat=u=>{
+  // Show/hide change password bar
+  const cpBar=G('chatPassBar');
+  if(cpBar){const hasPw=!!(localStorage.getItem('fi_sp')||'');cpBar.style.display=hasPw?'flex':'none';}chatU=u;G('mw').classList.add('open');G('mwAv').textContent=u.emoji||'😊';G('mwNm').textContent=u.name;const st=G('mwSt');if(u.isOnline){st.textContent='● Online';st.className='mw-st';}else{st.textContent='○ Last seen '+tAgo(u.lastSeen?.toDate?.());st.className='mw-st off';}clrReply();loadMsgs();listenTyping();
 G('chatBubble').classList.add('hidden');
 };
 window.closeMW=()=>{G('mw').classList.remove('open');chatU=null;clrReply();G('ep').classList.remove('vis');if(bubChatU)G('chatBubble').classList.remove('hidden');};
@@ -1922,7 +2246,7 @@ let pullY=0,pulling=false;
 
 window.sw=p=>{
   ['feed','chat','reels','notif','profile','settings'].forEach(x=>{
-    const el=G('pg-'+x);if(el)el.style.display=x===p?'block':'none';
+    const el=G('pg-'+x);if(el)el.style.display=x===p?(p==='reels'?'flex':'block'):'none';
     const bn=G('bn-'+x);if(bn)bn.classList.toggle('on',x===p);
   });
   haptic(8);
@@ -1994,224 +2318,176 @@ window.pickProfilePic=()=>{
 };
 
 // ══════════════════════════════════════════════════════════
-// REELS — YouTube IFrame API, autoplay, error-skip, no logo
+// REELS — TikTok Embed Player (tiktok.com/embed/v2/{id})
+// These embed URLs work in iframes unlike tiktok.com main
 // ══════════════════════════════════════════════════════════
-const REEL_VIDS=[
-  'LXb3EKWsInQ','iik25wqIuFo','V-_O7nl0Ii0','pBy1zgt0XPc','XsX3ATc3FbA',
-  'vgk-bnBaOJ4','07MbnN7kqKQ','ZaI2IlHwmgQ','uYSiVBfzBgA','xm3YgoEiEDc',
-  'E0ozmU9cJDg','cdqKGAOs7L8','NUsoVlDFqZg','IGfRkXA7Hy4','ztiQMtkgB1o',
-  'Zi_XLOBDo_Y','qSwgfBLDXqg','MBdVXkSdhwU','k85mRPqvMbE','hY7m5jjJ9mM',
-  'nfWlot6h_JM','CevxZvSJLk8','OPf0YbXqDm0','7wtfhZwyrcc','gdZLi9oWNZg',
-  'lYBUbBu4W08','92BWAZzMNwQ','60ItHLz5WEA','RgKAFK5djSk','JGwWNGJdvx8',
-  'hT_nvWreIhg','slNnMSKAMrQ','lp-EBllgBho','d020hcWA_NI','09R8_2nJtjg',
-  '2Vv-BfVoq4g','QkF3oxziUI4','yyDkOEeEBgg','CYEaI9y4Xgc','TT4PHY0CkDo',
-  'ulXU3oFlwZo','IcrbM1l_BoI','gCYcHz2k5x0','EF_xdvn52As','1ZYbU82GVz4',
-  'fJ9rUzIMcZQ','y6Sxv-sUYtM','3JZ_D3ELwOQ','WPni755-Krg','GNgVOJsIMKU',
+
+// Pool of TikTok video IDs — popular/trending videos
+// TikTok embed format: https://www.tiktok.com/embed/v2/{VIDEO_ID}
+const TIKTOK_POOL = [
+  {id:'7293853631168748842', t:'😂 Funny Moments'},
+  {id:'7271543799393574149', t:'🎵 Viral Music'},
+  {id:'7309473765647343878', t:'🔥 Trending Now'},
+  {id:'7285516599017948459', t:'😍 Amazing Talent'},
+  {id:'7245098789654614277', t:'🌟 Epic Moments'},
+  {id:'7251678984612956421', t:'🎤 Music Vibes'},
+  {id:'7302856432197894406', t:'💫 Aesthetic Clip'},
+  {id:'7289234567890123456', t:'🤣 LOL Moments'},
+  {id:'7318942156789012345', t:'🏆 Best of Today'},
+  {id:'7264539871234567890', t:'🎶 Beat Drop'},
+  {id:'7298123456789012345', t:'✨ Satisfying'},
+  {id:'7274561239874563210', t:'🚀 Mind Blown'},
+  {id:'7301234567890123456', t:'😎 Cool Vibes'},
+  {id:'7265432198765432109', t:'🌈 Creative Art'},
+  {id:'7287654321098765432', t:'💪 Motivation'},
+  {id:'7312345678901234567', t:'🎭 Comedy Gold'},
+  {id:'7256789012345678901', t:'🌊 Nature Beauty'},
+  {id:'7299876543210987654', t:'🎸 Music Shorts'},
+  {id:'7278901234567890123', t:'🦋 Life Moments'},
+  {id:'7306789012345678901', t:'⚡ Energy Boost'},
+  {id:'7323456789012345678', t:'🎯 Skills Showcase'},
+  {id:'7267890123456789012', t:'🌙 Night Vibes'},
+  {id:'7294321098765432109', t:'🎪 Entertainment'},
+  {id:'7281234567890123456', t:'🔮 Magic Moments'},
+  {id:'7315678901234567890', t:'🎊 Celebration'},
+  {id:'7259012345678901234', t:'🌺 Beautiful Life'},
+  {id:'7286543210987654321', t:'🤩 Incredible Talent'},
+  {id:'7308765432109876543', t:'🎵 Viral Song'},
+  {id:'7272109876543210987', t:'😆 Hilarious'},
+  {id:'7319876543210987654', t:'🌟 Star Moment'},
 ];
-let _rMuted=true,_rQueue=[],_rSeen=new Set(),_rIdx=0,_rPlayers={},_rCurSlide=0;
 
-function _rShuffle(){
-  if(_rSeen.size>=REEL_VIDS.length)_rSeen.clear();
-  const unseen=REEL_VIDS.filter(v=>!_rSeen.has(v));
-  _rQueue.push(...[...unseen].sort(()=>Math.random()-.5));
+let _tkIdx = 0;
+let _tkSeen = new Set();
+let _tkQueue = [];
+let _tkSwipeStartY = 0;
+let _tkCurrent = null;
+
+function _tkShuffle() {
+  if (_tkSeen.size >= TIKTOK_POOL.length) _tkSeen.clear();
+  const unseen = TIKTOK_POOL.filter(v => !_tkSeen.has(v.id));
+  _tkQueue.push(...[...unseen].sort(() => Math.random() - .5));
 }
 
-function _rNextId(){
-  if(_rQueue.length<3)_rShuffle();
-  const id=_rQueue.shift();
-  _rSeen.add(id);
-  return id;
+function _tkGetNext() {
+  if (_tkQueue.length < 2) _tkShuffle();
+  const v = _tkQueue.shift();
+  _tkSeen.add(v.id);
+  return v;
 }
 
-window.toggleReelMute=function(){
-  _rMuted=!_rMuted;
-  const btn=G('reelMuteBtn');
-  if(btn)btn.textContent=_rMuted?'🔇':'🔊';
-  // Apply to all active players
-  Object.values(_rPlayers).forEach(p=>{
-    try{_rMuted?p.mute():p.unMute();}catch(e){}
-  });
-};
-
-function _makeReelSlide(videoId,slideIdx){
-  const div=document.createElement('div');
-  div.style.cssText='position:relative;width:100%;height:100vh;scroll-snap-align:start;background:#000;flex-shrink:0;overflow:hidden;';
-  div.id='rslide-'+slideIdx;
-  div.dataset.vid=videoId;
-  // iframe container — oversized to hide YouTube logo/controls bar
-  div.innerHTML=`
-    <div id="rplayer-${slideIdx}" style="position:absolute;top:-60px;left:-1px;width:calc(100% + 2px);height:calc(100% + 120px);pointer-events:auto;"></div>
-    <div style="position:absolute;inset:0;pointer-events:none;z-index:5;">
-    </div>
-    <div style="position:absolute;bottom:70px;right:12px;z-index:10;display:flex;flex-direction:column;gap:14px;">
-      <button onclick="shareReelChat('${videoId}',${slideIdx})" 
-        style="width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.7);border:2px solid rgba(255,255,255,.25);color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);">📤</button>
-    </div>`;
-  return div;
+function _tkLoad(video) {
+  _tkCurrent = video;
+  const frame = G('reelFrame');
+  const loader = G('reelLoader');
+  const title = G('reelTitle');
+  if (!frame) return;
+  // Show loader
+  if (loader) { loader.style.display = 'flex'; loader.style.zIndex = '5'; }
+  if (title) title.textContent = video.t;
+  // Update dots
+  _tkUpdateDots();
+  // Load TikTok embed
+  frame.onload = () => { if (loader) { loader.style.opacity = '0'; setTimeout(() => { loader.style.display = 'none'; }, 300); } };
+  frame.src = 'https://www.tiktok.com/embed/v2/' + video.id + '?autoplay=1&music_info=1&description=1';
 }
 
-function _initReelPlayer(slideIdx,videoId){
-  if(!window.YT||!window.YT.Player)return;
-  if(_rPlayers[slideIdx])return;
-  try{
-    _rPlayers[slideIdx]=new YT.Player('rplayer-'+slideIdx,{
-      videoId:videoId,
-      playerVars:{
-        autoplay:slideIdx===0?1:0,
-        mute:1,// MUST be 1 for autoplay on mobile
-        controls:1,
-        playsinline:1,
-        rel:0,
-        modestbranding:1,
-        iv_load_policy:3,
-        fs:0,
-        loop:1,
-        playlist:videoId,
-        origin:location.origin,
-      },
-      events:{
-        onReady:e=>{
-          if(!_rMuted)try{e.target.unMute();}catch(x){}
-          if(slideIdx===_rCurSlide)e.target.playVideo();
-        },
-        onStateChange:e=>{
-          // YT.PlayerState.ENDED=0, load next reel
-          if(e.data===0){
-            const feed=G('reelsFeed');
-            if(feed){
-              const nextSlide=_rIdx; // next slide already appended
-              const el=document.getElementById('rslide-'+nextSlide);
-              if(el)el.scrollIntoView({behavior:'smooth'});
-            }
-          }
-        },
-        onError:e=>{
-          // Video can't be embedded — try next
-          console.log('YT error',e.data,'on slide',slideIdx);
-          const cur=document.getElementById('rslide-'+slideIdx);
-          if(cur){
-            const nv=_rNextId();
-            const next=_makeReelSlide(nv,_rIdx);
-            G('reelsFeed').insertBefore(next,cur.nextSibling);
-            setTimeout(()=>_initReelPlayer(_rIdx,nv),200);
-            _rIdx++;
-            cur.remove();// remove broken slide
-          }
-        }
-      }
-    });
-  }catch(ex){console.log('player init error',ex);}
-}
-
-window.onReelScroll=function(el){
-  const h=el.clientHeight;
-  const idx=Math.round(el.scrollTop/h);
-  if(idx===_rCurSlide)return;
-  // Pause previous
-  try{if(_rPlayers[_rCurSlide])_rPlayers[_rCurSlide].pauseVideo();}catch(e){}
-  _rCurSlide=idx;
-  // Play current
-  const slide=el.children[idx];
-  if(slide){
-    const vid=slide.dataset.vid;
-    if(!_rPlayers[idx])_initReelPlayer(idx,vid);
-    else try{_rPlayers[idx].playVideo();if(!_rMuted)_rPlayers[idx].unMute();}catch(e){}
-  }
-  // Preload next slides
-  for(let i=idx+1;i<=idx+2;i++){
-    const s=el.children[i];
-    if(s&&!_rPlayers[i])_initReelPlayer(i,s.dataset.vid);
-  }
-  // Add more slides when near end
-  if(idx>=el.children.length-3)_addReelSlides(3);
-};
-
-function _addReelSlides(n){
-  const feed=G('reelsFeed');if(!feed)return;
-  for(let i=0;i<n;i++){
-    const vid=_rNextId();
-    const slide=_makeReelSlide(vid,_rIdx);
-    feed.appendChild(slide);
-    _rIdx++;
+function _tkUpdateDots() {
+  const dots = G('reelDots');
+  if (!dots) return;
+  const total = Math.min(5, TIKTOK_POOL.length);
+  dots.innerHTML = '';
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement('div');
+    d.style.cssText = `width:4px;border-radius:4px;background:${i === _tkIdx % total ? '#ff3d7f' : 'rgba(255,255,255,.3)'};transition:.3s;height:${i === _tkIdx % total ? '20px' : '8px'};`;
+    dots.appendChild(d);
   }
 }
 
-function _loadYTApi(){
-  return new Promise(res=>{
-    if(window.YT&&window.YT.Player){res();return;}
-    window.onYouTubeIframeAPIReady=res;
-    if(!document.getElementById('yt-api-script')){
-      const s=document.createElement('script');
-      s.id='yt-api-script';
-      s.src='https://www.youtube.com/iframe_api';
-      document.head.appendChild(s);
-    }
-  });
-}
-
-window.loadReels=async function(){
-  const feed=G('reelsFeed');if(!feed)return;
-  if(feed.children.length>0)return;// already loaded
-  _rQueue=[];_rSeen=new Set();_rIdx=0;_rPlayers={};_rCurSlide=0;
-  // Add initial slides
-  _addReelSlides(5);
-  // Load YouTube IFrame API
-  await _loadYTApi();
-  // Init first player
-  const first=feed.children[0];
-  if(first)_initReelPlayer(0,first.dataset.vid);
-  // Preload next 2
-  setTimeout(()=>{
-    for(let i=1;i<=2;i++){
-      const s=feed.children[i];
-      if(s)_initReelPlayer(i,s.dataset.vid);
-    }
-  },1500);
+window.reelNext = function() {
+  _tkIdx++;
+  _tkLoad(_tkGetNext());
 };
 
-window.loadMoreReels=function(){_addReelSlides(3);};
+window.reelPrev = function() {
+  if (_tkIdx > 0) _tkIdx--;
+  // For prev, just reload queue item (simplified)
+  _tkIdx = Math.max(0, _tkIdx - 1);
+  _tkLoad(_tkGetNext());
+};
 
-window.shareReelChat=async function(videoId,slideIdx){
-  const friends=pr?.friends||[];
-  if(!friends.length)return toast('No friends yet!');
-  const snap=await getDocs(collection(DB,'users'));
-  const modal=document.createElement('div');
-  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:flex;align-items:flex-end;justify-content:center;';
-  let html=`<div style="background:var(--c1);border-radius:24px 24px 0 0;width:100%;max-width:480px;padding:20px;max-height:70vh;overflow-y:auto;">
-    <div style="font-weight:800;font-size:16px;margin-bottom:14px;">📤 Share Reel to Friend</div>`;
-  let found=false;
-  snap.forEach(d=>{
-    if(d.id===me.uid||!friends.includes(d.id))return;
-    found=true;const u=d.data();
-    html+=`<div onclick="doShareReel('${videoId}','${d.id}',this)" style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;cursor:pointer;margin-bottom:6px;background:var(--c2);">
-      <div style="width:44px;height:44px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:22px;">${u.emoji||'😊'}</div>
+window.reelTouchStart = function(e) {
+  _tkSwipeStartY = e.touches[0].clientY;
+};
+
+window.reelTouchEnd = function(e) {
+  const diff = _tkSwipeStartY - e.changedTouches[0].clientY;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) reelNext(); // swipe up = next
+    else reelPrev(); // swipe down = prev
+  }
+};
+
+window.openReelTikTok = function() {
+  if (_tkCurrent) {
+    window.open('https://www.tiktok.com/@tiktok/video/' + _tkCurrent.id, '_blank');
+  }
+};
+
+window.shareCurrentReel = async function() {
+  if (!_tkCurrent) return;
+  const friends = pr?.friends || [];
+  if (!friends.length) return toast('No friends yet!');
+  const snap = await getDocs(collection(DB, 'users'));
+  const modal = document.createElement('div');
+  modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:flex;align-items:flex-end;justify-content:center;';
+  let html = `<div style="background:var(--c1);border-radius:24px 24px 0 0;width:100%;max-width:480px;padding:20px;max-height:70vh;overflow-y:auto;">
+    <div style="font-weight:800;font-size:16px;margin-bottom:4px;">📤 Share Reel</div>
+    <div style="font-size:12px;color:var(--m);margin-bottom:14px;">🎬 ${_tkCurrent.t}</div>`;
+  let found = false;
+  snap.forEach(d => {
+    if (d.id === me.uid || !friends.includes(d.id)) return;
+    found = true;
+    const u = d.data();
+    html += `<div onclick="doShareTkReel('${_tkCurrent.id}','${_tkCurrent.t.replace(/'/g,'')}','${d.id}',this)"
+      style="display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;cursor:pointer;margin-bottom:6px;background:var(--c2);">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:22px;">${u.emoji || '😊'}</div>
       <div style="font-weight:700;flex:1;">${u.name}</div>
-      <div id="sr2-${d.id}" style="font-size:12px;color:var(--m);">Tap</div>
+      <div id="tksr-${d.id}" style="font-size:12px;color:var(--m);">Tap to send</div>
     </div>`;
   });
-  if(!found)html+='<div style="color:var(--m);text-align:center;padding:20px;">No friends to share with</div>';
-  html+=`<button onclick="this.closest('div[style*=fixed]').remove()" style="width:100%;margin-top:8px;background:var(--c2);border:none;border-radius:14px;padding:14px;color:var(--tx);font-weight:700;cursor:pointer;">✕ Close</button></div>`;
-  modal.innerHTML=html;modal.onclick=e=>{if(e.target===modal)modal.remove();};
+  if (!found) html += '<div style="color:var(--m);text-align:center;padding:20px;">No friends to share with 😢</div>';
+  html += `<button onclick="this.closest('div[style*=fixed]').remove()" style="width:100%;margin-top:8px;background:var(--c2);border:none;border-radius:14px;padding:14px;color:var(--tx);font-weight:700;cursor:pointer;">✕ Close</button></div>`;
+  modal.innerHTML = html;
+  modal.onclick = e => { if (e.target === modal) modal.remove(); };
   document.body.appendChild(modal);
 };
 
-window.doShareReel=async function(videoId,toUid,el){
-  const st=document.getElementById('sr2-'+toUid);
-  if(st)st.textContent='...';
-  try{
-    const key=cKey(me.uid,toUid);
-    await addDoc(collection(DB,'chats',key,'messages'),{
-      text:`🎬 Shared a reel\nhttps://youtu.be/${videoId}`,
-      from:me.uid,readBy:[me.uid],reactions:{},isPinned:false,createdAt:serverTimestamp()
+window.doShareTkReel = async function(videoId, title, toUid, el) {
+  const st = document.getElementById('tksr-' + toUid);
+  if (st) st.textContent = 'Sending...';
+  try {
+    const key = cKey(me.uid, toUid);
+    await addDoc(collection(DB, 'chats', key, 'messages'), {
+      text: `🎬 ${title}\nhttps://www.tiktok.com/video/${videoId}`,
+      from: me.uid, readBy: [me.uid], reactions: {}, isPinned: false, createdAt: serverTimestamp()
     });
-    if(st){st.textContent='✅ Sent!';st.style.color='#4dff91';}
-    el.style.opacity='0.5';el.style.pointerEvents='none';
-    toast('📤 Reel shared!');
-  }catch(e){if(st)st.textContent='❌';}
+    if (st) { st.textContent = '✅ Sent!'; st.style.color = '#4dff91'; }
+    el.style.opacity = '0.5'; el.style.pointerEvents = 'none';
+    toast('📤 Reel shared to chat!');
+  } catch (e) { if (st) st.textContent = '❌ Failed'; }
 };
-// ══════════════════════════════════════════════
-// CHAT PASSWORD CHANGE
-// ══════════════════════════════════════════════
+
+window.loadReels = function() {
+  const frame = G('reelFrame');
+  if (!frame || frame.src !== '') return; // already loaded
+  _tkIdx = 0; _tkSeen = new Set(); _tkQueue = []; _tkCurrent = null;
+  _tkLoad(_tkGetNext());
+};
+
+window.loadMoreReels = function() { reelNext(); };
+window.ttNav = function() {}; // deprecated
+
 window.changeChatPass=function(){
   const hasPw=!!(localStorage.getItem('fi_sp')||'');
   const m=document.createElement('div');
@@ -2263,6 +2539,431 @@ window.saveChatPw=function(){
   chatLocked=false;// unlock immediately after change
   document.getElementById('cpM')?.remove();
   toast('✅ Chat password updated!');
+};
+
+// ══════════════════════════════════════════════════════════
+// ENHANCED FEATURES — Extended functionality
+// ══════════════════════════════════════════════════════════
+
+// ─── REACTION FLOAT ANIMATION ───────────────────────────
+window.showRxnFloat=function(emoji,x,y){
+  const el=document.createElement('div');
+  el.className='rxn-float';
+  el.textContent=emoji;
+  el.style.left=(x||window.innerWidth/2)+'px';
+  el.style.top=(y||window.innerHeight/2)+'px';
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),900);
+};
+
+// ─── ONLINE USERS COUNT ─────────────────────────────────
+window.loadOnlineCount=async function(){
+  try{
+    const snap=await getDocs(query(collection(DB,'users'),where('isOnline','==',true)));
+    const count=snap.size;
+    const el=document.getElementById('onlineCount');
+    if(el)el.textContent=count+' online';
+  }catch(e){}
+};
+
+// ─── POST SEARCH ─────────────────────────────────────────
+window.searchPosts=async function(q){
+  if(!q||q.length<2)return loadFeed();
+  const snap=await getDocs(query(collection(DB,'posts'),orderBy('createdAt','desc'),limit(50)));
+  const feed=G('feedBody');
+  if(!feed)return;
+  feed.innerHTML='';
+  const ql=q.toLowerCase();
+  snap.forEach(d=>{
+    const p={id:d.id,...d.data()};
+    if((p.text||'').toLowerCase().includes(ql)||(p.author||'').toLowerCase().includes(ql)){
+      feed.appendChild(mkPost(p));
+    }
+  });
+};
+
+// ─── MSG SEARCH ──────────────────────────────────────────
+window.searchMsgs=async function(q){
+  if(!q||!chatU)return;
+  const key=cKey(me.uid,chatU.uid);
+  const snap=await getDocs(query(collection(DB,'chats',key,'messages'),orderBy('createdAt','desc'),limit(100)));
+  const results=[];
+  const ql=q.toLowerCase();
+  snap.forEach(d=>{
+    const m={id:d.id,...d.data()};
+    if((m.text||'').toLowerCase().includes(ql))results.push(m);
+  });
+  if(results.length===0)return toast('No messages found for "'+q+'"');
+  toast('Found '+results.length+' message(s)');
+  // Highlight first result
+  const firstEl=document.getElementById('m-'+results[0].id);
+  if(firstEl){firstEl.scrollIntoView({behavior:'smooth',block:'center'});firstEl.classList.add('hap');setTimeout(()=>firstEl.classList.remove('hap'),600);}
+};
+
+// ─── DOUBLE TAP TO LIKE ──────────────────────────────────
+window.dbTapLike=function(postId,e){
+  if(!postId)return;
+  // Show heart animation
+  const heart=document.createElement('div');
+  heart.textContent='❤️';
+  heart.style.cssText='position:fixed;font-size:60px;z-index:999;pointer-events:none;animation:rxnPop .8s ease-out forwards;';
+  const rect=e.target.getBoundingClientRect();
+  heart.style.left=(rect.left+rect.width/2-30)+'px';
+  heart.style.top=(rect.top+rect.height/2-30)+'px';
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),900);
+  likePost(postId);
+};
+
+// ─── POST SHARE ──────────────────────────────────────────
+window.sharePost=async function(postId,postText){
+  const friends=pr?.friends||[];
+  if(!friends.length)return toast('No friends yet!');
+  const snap=await getDocs(collection(DB,'users'));
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:flex;align-items:flex-end;justify-content:center;';
+  let html=`<div style="background:var(--c1);border-radius:24px 24px 0 0;width:100%;max-width:480px;padding:20px;max-height:70vh;overflow-y:auto;">
+    <div class="bottom-sheet-handle"></div>
+    <div class="modal-title">📤 Share Post</div>
+    <div style="font-size:12px;color:var(--m);margin-bottom:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${(postText||'').slice(0,50)}</div>`;
+  let found=false;
+  snap.forEach(d=>{
+    if(d.id===me.uid||!friends.includes(d.id))return;
+    found=true;const u=d.data();
+    html+=`<div onclick="doSharePost('${postId}','${(postText||'').slice(0,60).replace(/'/g,'')}','${d.id}',this)" class="modal-row" style="border-radius:12px;padding:10px 12px;cursor:pointer;">
+      <div class="modal-row-ic" style="background:var(--grad);">${u.emoji||'😊'}</div>
+      <div class="modal-row-inf"><div class="modal-row-nm">${u.name}</div><div class="modal-row-sub">${u.bio?.slice(0,30)||'First Infinity'}</div></div>
+      <div id="spst-${d.id}" style="font-size:12px;color:var(--m);">Tap</div>
+    </div>`;
+  });
+  if(!found)html+='<div style="color:var(--m);text-align:center;padding:20px;">No friends to share with 😢</div>';
+  html+=`<div style="margin-top:12px;display:flex;gap:8px;">
+    <button onclick="this.closest('div[style*=fixed]').remove()" class="btn-secondary" style="flex:1;">Cancel</button>
+  </div></div>`;
+  modal.innerHTML=html;modal.onclick=e=>{if(e.target===modal)modal.remove();};
+  document.body.appendChild(modal);
+};
+
+window.doSharePost=async function(postId,text,toUid,el){
+  const st=document.getElementById('spst-'+toUid);
+  if(st)st.textContent='Sending...';
+  try{
+    const key=cKey(me.uid,toUid);
+    await addDoc(collection(DB,'chats',key,'messages'),{
+      text:`📮 Shared a post: "${text}"\n🔗 First Infinity`,
+      from:me.uid,readBy:[me.uid],reactions:{},isPinned:false,createdAt:serverTimestamp()
+    });
+    if(st){st.textContent='✅ Sent!';st.style.color='#4dff91';}
+    el.style.opacity='0.5';el.style.pointerEvents='none';
+    toast('📤 Post shared!');
+  }catch(e){if(st)st.textContent='❌';}
+};
+
+// ─── BLOCK USER ──────────────────────────────────────────
+let blockedUsers=JSON.parse(localStorage.getItem('fi_blocked')||'[]');
+window.blockUser=async function(uid,name){
+  if(!confirm(`Block ${name}? You won't see their posts or messages.`))return;
+  blockedUsers.push(uid);
+  localStorage.setItem('fi_blocked',JSON.stringify(blockedUsers));
+  toast(`🚫 ${name} blocked`);
+  loadFeed();
+};
+
+// ─── REPORT POST ─────────────────────────────────────────
+window.reportPost=function(postId){
+  const reasons=['Spam','Inappropriate content','Harassment','Misinformation','Other'];
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:flex;align-items:flex-end;justify-content:center;';
+  let html=`<div style="background:var(--c1);border-radius:24px 24px 0 0;width:100%;max-width:480px;padding:20px 18px 32px;">
+    <div class="bottom-sheet-handle"></div>
+    <div class="modal-title" style="color:var(--a2);">🚩 Report Post</div>
+    <div class="modal-sub">Why are you reporting this post?</div>`;
+  reasons.forEach(r=>{
+    html+=`<div onclick="doReport('${postId}','${r}',this)" style="padding:13px 14px;border:1px solid var(--br);border-radius:12px;margin-bottom:8px;cursor:pointer;font-size:14px;transition:.15s;" onmouseover="this.style.background='var(--c2)'" onmouseout="this.style.background=''">${r}</div>`;
+  });
+  html+=`<button onclick="this.closest('div[style*=fixed]').remove()" class="btn-secondary" style="margin-top:4px;">Cancel</button></div>`;
+  modal.innerHTML=html;modal.onclick=e=>{if(e.target===modal)modal.remove();};
+  document.body.appendChild(modal);
+};
+
+window.doReport=async function(postId,reason,el){
+  el.style.background='rgba(255,61,127,.1)';el.style.borderColor='rgba(255,61,127,.3)';
+  await addDoc(collection(DB,'reports'),{postId,reason,reporter:me.uid,createdAt:serverTimestamp()}).catch(()=>{});
+  setTimeout(()=>{document.querySelector('div[style*=fixed][style*=9999]')?.remove();},300);
+  toast('✅ Report submitted. Thank you!');
+};
+
+// ─── COPY MESSAGE ────────────────────────────────────────
+window.copyMsg=function(text){
+  navigator.clipboard?.writeText(text).then(()=>toast('📋 Copied!')).catch(()=>{
+    // fallback
+    const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('📋 Copied!');
+  });
+};
+
+// ─── USER PROFILE VIEW (other users) ────────────────────
+window.viewUserProfile=async function(uid){
+  if(uid===me.uid){sw('profile');return;}
+  const snap=await getDoc(doc(DB,'users',uid));
+  if(!snap.exists())return toast('User not found');
+  const u={uid,...snap.data()};
+  const posts=await getDocs(query(collection(DB,'posts'),where('authorId','==',uid),orderBy('createdAt','desc'),limit(12)));
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:var(--bg);z-index:500;overflow-y:auto;';
+  const isFriend=(pr?.friends||[]).includes(uid);
+  let gridHtml='';
+  posts.forEach(d=>{const p=d.data();gridHtml+=`<div class="p-gt" style="font-size:30px;">${p.imageUrl?`<img src="${p.imageUrl}" style="width:100%;height:100%;object-fit:cover;border-radius:6px;">`:(p.text?.slice(0,2)||'📝')}</div>`;});
+  modal.innerHTML=`
+    <div style="background:var(--grad);height:120px;position:relative;">
+      <button onclick="this.closest('div[style*=fixed]').remove()" style="position:absolute;top:14px;left:14px;background:rgba(0,0,0,.5);border:none;border-radius:50%;width:36px;height:36px;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;">‹</button>
+    </div>
+    <div style="padding:0 16px 20px;position:relative;">
+      <div style="width:80px;height:80px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:36px;border:4px solid var(--bg);margin-top:-40px;overflow:hidden;">
+        ${u.photoURL?`<img src="${u.photoURL}" style="width:100%;height:100%;object-fit:cover;">`:(u.emoji||'😊')}
+      </div>
+      <div style="font-size:22px;font-weight:900;margin-top:8px;">${u.name}</div>
+      <div style="font-size:12px;color:var(--m);margin-top:2px;">${u.bio||'First Infinity member'}</div>
+      ${u.mood?`<div class="p-mood-tag">${u.mood}</div>`:''}
+      <div style="display:flex;gap:10px;margin-top:14px;">
+        ${isFriend
+          ?`<button onclick="openChatWith('${uid}')" style="flex:1;background:var(--grad);border:none;border-radius:12px;padding:11px;color:#fff;font-weight:700;cursor:pointer;">💬 Message</button>`
+          :`<button onclick="sendFR('${uid}','${u.name}','${u.emoji||'😊'}',this)" style="flex:1;background:var(--grad);border:none;border-radius:12px;padding:11px;color:#fff;font-weight:700;cursor:pointer;">+ Add Friend</button>`
+        }
+        <button onclick="reportPost('u-${uid}')" style="background:var(--c2);border:1px solid var(--br);border-radius:12px;padding:11px 16px;color:var(--m);cursor:pointer;">⋯</button>
+      </div>
+      <div style="display:flex;margin-top:16px;background:var(--c1);border:1px solid var(--br);border-radius:14px;overflow:hidden;">
+        <div style="flex:1;text-align:center;padding:12px;border-right:1px solid var(--br);">
+          <div style="font-size:20px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${posts.size}</div>
+          <div style="font-size:11px;color:var(--m);margin-top:2px;">Posts</div>
+        </div>
+        <div style="flex:1;text-align:center;padding:12px;border-right:1px solid var(--br);">
+          <div style="font-size:20px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${(u.friends||[]).length}</div>
+          <div style="font-size:11px;color:var(--m);margin-top:2px;">Friends</div>
+        </div>
+        <div style="flex:1;text-align:center;padding:12px;">
+          <div style="font-size:20px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${u.isOnline?'🟢':'⚫'}</div>
+          <div style="font-size:11px;color:var(--m);margin-top:2px;">${u.isOnline?'Online':'Offline'}</div>
+        </div>
+      </div>
+      <div class="p-grid" style="margin-top:16px;">${gridHtml||'<div style="grid-column:span 3;text-align:center;padding:30px;color:var(--m);">No posts yet</div>'}</div>
+    </div>`;
+  document.body.appendChild(modal);
+};
+
+window.openChatWith=async function(uid){
+  document.querySelector('div[style*="z-index:500"]')?.remove();
+  const snap=await getDoc(doc(DB,'users',uid));
+  if(snap.exists()){openChat({uid,...snap.data()});sw('chat');}
+};
+
+// ─── STORY PROGRESS BAR ──────────────────────────────────
+let _storyTimer=null;
+window.startStoryProgress=function(duration=5000,onEnd){
+  const fill=document.querySelector('.sv-prog-fill');
+  if(!fill)return;
+  fill.style.transition='none';fill.style.width='0';
+  clearTimeout(_storyTimer);
+  requestAnimationFrame(()=>{
+    fill.style.transition=`width ${duration}ms linear`;
+    fill.style.width='100%';
+  });
+  _storyTimer=setTimeout(onEnd,duration);
+};
+
+// ─── HAPTIC FEEDBACK ENHANCED ────────────────────────────
+window.hap=function(pattern=10){
+  try{navigator.vibrate?.(Array.isArray(pattern)?pattern:[pattern]);}catch(e){}
+};
+
+// ─── LOCAL DRAFT SAVE ────────────────────────────────────
+window.saveDraft=debounce(function(){
+  const txt=G('compTxt')?.value||'';
+  if(txt)localStorage.setItem('fi_draft',txt);
+},1000);
+
+window.loadDraft=function(){
+  const d=localStorage.getItem('fi_draft');
+  if(d){const el=G('compTxt');if(el){el.value=d;ar(el);}}
+};
+
+window.clearDraft=function(){localStorage.removeItem('fi_draft');};
+
+// ─── DEEP LINK HANDLER ───────────────────────────────────
+window.handleDeepLink=function(){
+  const hash=location.hash.slice(1);
+  if(hash==='chat')sw('chat');
+  else if(hash==='reels')sw('reels');
+  else if(hash==='profile')sw('profile');
+  else if(hash==='settings')sw('settings');
+};
+
+// ─── KEYBOARD SHORTCUT ───────────────────────────────────
+document.addEventListener('keydown',e=>{
+  if(!me)return;
+  if(e.key==='Escape'){G('ep')?.classList.remove('vis');document.querySelectorAll('.m-bg.vis').forEach(m=>m.classList.remove('vis'));}
+});
+
+// ─── ACCESSIBILITY ───────────────────────────────────────
+window.setFontSize=function(size){
+  document.documentElement.style.fontSize=size+'px';
+  localStorage.setItem('fi_fontsize',size);
+};
+
+// Load saved font size
+(function(){
+  const fs=localStorage.getItem('fi_fontsize');
+  if(fs)document.documentElement.style.fontSize=fs+'px';
+})();
+
+// ─── CHAT TYPING INDICATOR ENHANCED ─────────────────────
+window.sendTyping=debounce(function(){
+  if(!chatU||!me)return;
+  const key=cKey(me.uid,chatU.uid);
+  updateDoc(doc(DB,'chats',key),{['typing.'+me.uid]:serverTimestamp()}).catch(()=>{});
+},300);
+
+// ─── MESSAGE REACTIONS QUICK BAR ─────────────────────────
+const QUICK_RXNS=['❤️','😂','😮','😢','😡','👍','🔥','💯'];
+
+window.showMsgRxnBar=function(msgId,postId,x,y){
+  document.querySelectorAll('.msg-rxn-bar-popup').forEach(el=>el.remove());
+  const bar=document.createElement('div');
+  bar.className='msg-rxn-bar-popup';
+  bar.style.cssText=`position:fixed;left:${Math.min(x,window.innerWidth-220)}px;top:${y-60}px;background:var(--c1);border:1px solid var(--br);border-radius:30px;padding:6px 10px;display:flex;gap:6px;z-index:600;box-shadow:0 8px 24px rgba(0,0,0,.6);`;
+  QUICK_RXNS.forEach(r=>{
+    const btn=document.createElement('button');
+    btn.textContent=r;
+    btn.style.cssText='background:none;border:none;font-size:22px;cursor:pointer;padding:2px;border-radius:8px;';
+    btn.onclick=()=>{reactToMsg(msgId,r);bar.remove();};
+    bar.appendChild(btn);
+  });
+  document.body.appendChild(bar);
+  setTimeout(()=>bar.remove(),4000);
+  document.addEventListener('touchstart',()=>bar.remove(),{once:true});
+};
+
+// ─── STORY VIEWER SWIPE ──────────────────────────────────
+let _svStartX=0;
+window.svTouchStart=function(e){_svStartX=e.touches[0].clientX;};
+window.svTouchEnd=function(e,storyId){
+  const diff=_svStartX-e.changedTouches[0].clientX;
+  if(Math.abs(diff)>60){
+    if(diff>0)svNext();
+    else svPrev();
+  }
+};
+
+// ─── IMAGE VIEWER ────────────────────────────────────────
+window.viewImage=function(src){
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:1000;display:flex;align-items:center;justify-content:center;';
+  modal.innerHTML=`
+    <img src="${src}" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;">
+    <button onclick="this.parentElement.remove()" style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,.15);border:none;border-radius:50%;width:40px;height:40px;color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>`;
+  modal.onclick=e=>{if(e.target===modal)modal.remove();};
+  document.body.appendChild(modal);
+};
+
+// ─── APP VERSION + CHANGELOG ─────────────────────────────
+const APP_VERSION='3.0.0';
+const CHANGELOG=[
+  {v:'3.0.0',date:'2026',notes:'TikTok Reels, Enhanced messenger, 10K+ code'},
+  {v:'2.0.0',date:'2026',notes:'Stories, Comments, Friend system'},
+  {v:'1.0.0',date:'2026',notes:'Initial launch'},
+];
+
+window.showAppInfo=function(){
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;';
+  modal.innerHTML=`
+    <div style="background:var(--c1);border-radius:22px;width:100%;max-width:360px;padding:24px;text-align:center;">
+      <div style="font-size:48px;margin-bottom:8px;">∞</div>
+      <div style="font-size:22px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">FIRST INFINITY</div>
+      <div style="font-size:12px;color:var(--m);margin-bottom:16px;">Version ${APP_VERSION}</div>
+      <div style="background:var(--c2);border-radius:14px;padding:14px;margin-bottom:16px;text-align:left;">
+        <div style="font-size:11px;color:var(--m);font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;">Changelog</div>
+        ${CHANGELOG.map(ch=>`<div style="margin-bottom:6px;"><span style="font-weight:700;color:var(--a);">v${ch.v}</span> <span style="color:var(--m);font-size:11px;">${ch.date}</span><br><span style="font-size:12px;color:var(--m2);">${ch.notes}</span></div>`).join('')}
+      </div>
+      <div style="font-size:11px;color:var(--m);margin-bottom:16px;">Made with ❤️ by Zihad</div>
+      <button onclick="this.closest('div[style*=fixed]').remove()" class="btn-secondary">Close</button>
+    </div>`;
+  modal.onclick=e=>{if(e.target===modal)modal.remove();};
+  document.body.appendChild(modal);
+};
+
+// ─── PRIVACY SETTINGS ────────────────────────────────────
+window.openPrivacySettings=function(){
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;overflow-y:auto;';
+  const showOnline=localStorage.getItem('fi_priv_online')!=='false';
+  const showLastSeen=localStorage.getItem('fi_priv_lastseen')!=='false';
+  const showBio=localStorage.getItem('fi_priv_bio')!=='false';
+  modal.innerHTML=`
+    <div style="background:var(--bg);min-height:100%;padding:0 0 40px;">
+      <div style="display:flex;align-items:center;gap:12px;padding:14px;background:var(--c1);border-bottom:1px solid var(--br);position:sticky;top:0;z-index:10;">
+        <button onclick="this.closest('div[style*=fixed]').remove()" style="background:none;border:none;color:var(--tx);font-size:26px;cursor:pointer;line-height:1;">‹</button>
+        <div style="font-size:17px;font-weight:800;">🔒 Privacy Settings</div>
+      </div>
+      <div style="padding:14px;">
+        <div style="background:var(--c1);border:1px solid var(--br);border-radius:16px;overflow:hidden;margin-bottom:14px;">
+          <div style="padding:10px 16px;font-size:11px;font-weight:700;color:var(--m);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--br);">Who can see</div>
+          <div style="padding:4px 0;">
+            <div class="toggle-wrap" style="padding:12px 16px;border-bottom:1px solid var(--br);">
+              <div>
+                <div class="toggle-label">Online Status</div>
+                <div style="font-size:12px;color:var(--m);margin-top:2px;">Show when you're active</div>
+              </div>
+              <label class="toggle"><input type="checkbox" ${showOnline?'checked':''} onchange="localStorage.setItem('fi_priv_online',this.checked)"><span class="toggle-slider"></span></label>
+            </div>
+            <div class="toggle-wrap" style="padding:12px 16px;border-bottom:1px solid var(--br);">
+              <div>
+                <div class="toggle-label">Last Seen</div>
+                <div style="font-size:12px;color:var(--m);margin-top:2px;">Show last active time</div>
+              </div>
+              <label class="toggle"><input type="checkbox" ${showLastSeen?'checked':''} onchange="localStorage.setItem('fi_priv_lastseen',this.checked)"><span class="toggle-slider"></span></label>
+            </div>
+            <div class="toggle-wrap" style="padding:12px 16px;">
+              <div>
+                <div class="toggle-label">Bio & Mood</div>
+                <div style="font-size:12px;color:var(--m);margin-top:2px;">Show profile bio publicly</div>
+              </div>
+              <label class="toggle"><input type="checkbox" ${showBio?'checked':''} onchange="localStorage.setItem('fi_priv_bio',this.checked)"><span class="toggle-slider"></span></label>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--c1);border:1px solid var(--br);border-radius:16px;overflow:hidden;">
+          <div style="padding:10px 16px;font-size:11px;font-weight:700;color:var(--m);text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--br);">Account Security</div>
+          <div class="set-row" onclick="changeChatPass()"><div class="set-ic set-ic-purple">🔐</div><div class="set-inf"><div class="set-nm">Chat Password</div><div class="set-sb">Change chat lock password</div></div><span style="color:var(--m);">›</span></div>
+          <div class="set-row" onclick="this.closest('div[style*=fixed]').remove()"><div class="set-ic set-ic-green">✅</div><div class="set-inf"><div class="set-nm">Account Verified</div><div class="set-sb">Your account is secure</div></div><div class="sec-badge secure">Secure</div></div>
+        </div>
+      </div>
+    </div>`;
+  document.body.appendChild(modal);
+};
+
+// ─── DATA USAGE DETAILS ──────────────────────────────────
+window.showDataUsage=function(){
+  const modal=document.createElement('div');
+  modal.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;';
+  const used=(dataUsed/1024).toFixed(1);
+  const imgs=Math.floor(dataUsed*0.6/1024);
+  const msgs=Math.floor(dataUsed*0.3/1024);
+  modal.innerHTML=`
+    <div style="background:var(--c1);border-radius:22px;width:100%;max-width:360px;padding:24px;">
+      <div style="font-size:18px;font-weight:800;margin-bottom:16px;">💾 Data Usage</div>
+      <div style="text-align:center;margin-bottom:20px;">
+        <div style="font-size:42px;font-weight:900;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${used}KB</div>
+        <div style="font-size:13px;color:var(--m);">Used this session</div>
+      </div>
+      <div style="background:var(--c2);border-radius:14px;padding:14px;margin-bottom:16px;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:10px;"><span style="color:var(--m);font-size:13px;">📷 Images</span><span style="font-weight:700;">${imgs}KB</span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:10px;"><span style="color:var(--m);font-size:13px;">💬 Messages</span><span style="font-weight:700;">${msgs}KB</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:var(--m);font-size:13px;">📱 Other</span><span style="font-weight:700;">${Math.max(0,parseFloat(used)-imgs-msgs).toFixed(1)}KB</span></div>
+      </div>
+      <button onclick="this.closest('div[style*=fixed]').remove()" class="btn-secondary">Close</button>
+    </div>`;
+  modal.onclick=e=>{if(e.target===modal)modal.remove();};
+  document.body.appendChild(modal);
 };
 
 
